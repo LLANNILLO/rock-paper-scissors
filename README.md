@@ -1,2 +1,2 @@
 # rock-paper-scissors
-A Project for a little game (not GUI yet)
+A Project for a little game (creating the GUI)
