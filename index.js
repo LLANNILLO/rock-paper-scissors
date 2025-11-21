@@ -321,7 +321,7 @@ function revealCPUChoice() {
         // Determine next state
         if (gameState.currentRound < gameState.totalRounds) {
             gameState.currentState = GameStates.ROUND_END;
-            elements.actionBtn.textContent = 'Siguiente Ronda';
+            elements.actionBtn.textContent = 'Next Round';
             elements.actionBtn.classList.remove('hidden');
         } else {
             gameState.currentState = GameStates.GAME_END;
@@ -335,7 +335,7 @@ function revealCPUChoice() {
  */
 elements.actionBtn.addEventListener('click', function () {
     if (gameState.currentState === GameStates.ROUND_END) {
-        // Preparar siguiente ronda
+        // prepare next round
         gameState.currentState = GameStates.PLAYING;
         gameState.playerChoice = null;
         gameState.cpuChoice = null;
@@ -357,5 +357,5 @@ elements.actionBtn.addEventListener('click', function () {
 // INICIALIZACIÓN
 // ============================================
 
-console.log('🎮 Juego de Piedra, Papel o Tijera iniciado');
-console.log('Estado inicial:', gameState.currentState);
+console.log('🎮 Initialized rock,paper, scissors game!');
+console.log('INITIAL STATE:', gameState.currentState);
