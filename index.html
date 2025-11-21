@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script src="index.js" defer></script>
 </head>
+
 <body>
-    
+
+    <div class="game-container">
+        <!-- Header with title & marker -->
+        <div class="game-header">
+            <h1 class="game-title">Rock, Paper Scissors</h1>
+
+            <div class="score-board hidden" id="scoreBoard">
+                <div class="scoreItem">
+                    <div class="score-label">Round</div>
+                    <div class="score-value" id="roundDisplay">0/0</div>
+                </div>
+                <div class="scoreItem">
+                    <div class="score-label">Player</div>
+                    <div class="score-value" id="playerScore">0</div>
+                </div>
+                <div class="scoreItem">
+                    <div class="score-label">CPU</div>
+                    <div class="score-value" id="cpuScore">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Round Selector -->
+        <div class="round-selector" id="roundSelector">
+            <h2>How many rounds you wanna play?</h2>
+            <div class="round-options">
+                <button class="round-btn" data-rounds="1">1</button>
+                <button class="round-btn" data-rounds="3">3</button>
+                <button class="round-btn" data-rounds="5">5</button>
+                <button class="round-btn" data-rounds="7">7</button>
+            </div>
+        </div>
+
+        <!-- Game Arena -->
+        <div class="game-arena hidden" id="gameArena">
+            <div class="player-area">
+                <div class="player-label">CPU</div>
+                <div class="choice-display cpu" id="cpuChoice">❓</div>
+            </div>
+
+            <div class="vs-text">VS</div>
+
+            <div class="player-area">
+                <div class="player-label">Player</div>
+                <div class="choice-display player" id="playerChoice">❓</div>
+            </div>
+        </div>
+
+        <!-- Game Result -->
+        <div class="round-result" id="roundResult"></div>
+
+        <!-- Game options -->
+        <div class="game-options">
+            <button class="option-btn rock disabled" data-choice="rock" id="rockBtn">
+                <img src="./images/rock.png" alt="Rock">
+            </button>
+            <button class="option-btn paper disabled" data-choice="paper" id="paperBtn">
+                <img src="./images/paper.png" alt="Paper">
+            </button>
+            <button class="option-btn scissors disabled" data-choice="scissors" id="scissorsBtn">
+                <img src="./images/scissors.png" alt="Scissors">
+            </button>
+        </div>
+
+        <!-- Message to select rounds -->
+        <div class="select-rounds-msg" id="selectRoundsMsg">
+            Select number of rounds to start playing!
+        </div>
+
+        <!-- Button Action (Next round / Play again) -->
+        <button class="action-btn hidden" id="actionBtn"> Next Round</button>
+    </div>
+
 </body>
+
 </html>
