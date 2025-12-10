@@ -1,2 +1,2 @@
 # rock-paper-scissors
-A Project for a little game (creating the GUI)
+A Project for a little game for the Odin Project
